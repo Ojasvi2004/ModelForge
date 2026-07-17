@@ -1,0 +1,102 @@
+Epoch 1/50:   0%|          | 0/36385 [00:00<?, ?it/s]C:\Users\Dell\AppData\Local\Temp\ipykernel_21604\1013653043.py:42: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  torch.from_numpy(y)
+Epoch 1/50: 100%|██████████| 36385/36385 [04:34<00:00, 132.77it/s, loss=3.55]   
+Average Loss: 5497.52099
+Epoch 2/50: 100%|██████████| 36385/36385 [04:53<00:00, 124.14it/s, loss=2.48e+3]
+Average Loss: 2573.85356
+Epoch 3/50: 100%|██████████| 36385/36385 [04:52<00:00, 124.28it/s, loss=36.4]   
+Average Loss: 1425.80864
+Epoch 4/50: 100%|██████████| 36385/36385 [04:48<00:00, 126.03it/s, loss=11.4]   
+Average Loss: 791.73572
+Epoch 5/50: 100%|██████████| 36385/36385 [04:48<00:00, 126.16it/s, loss=3.33]   
+Average Loss: 473.05714
+Epoch 6/50: 100%|██████████| 36385/36385 [04:33<00:00, 133.27it/s, loss=2.77]   
+Average Loss: 354.71615
+Epoch 7/50: 100%|██████████| 36385/36385 [04:13<00:00, 143.59it/s, loss=2.45]   
+Average Loss: 281.35878
+Epoch 8/50: 100%|██████████| 36385/36385 [04:13<00:00, 143.42it/s, loss=2.36]   
+Average Loss: 218.14269
+Epoch 9/50: 100%|██████████| 36385/36385 [04:08<00:00, 146.36it/s, loss=1.63]   
+Average Loss: 222.01363
+Epoch 10/50: 100%|██████████| 36385/36385 [04:08<00:00, 146.60it/s, loss=1.32]   
+Average Loss: 149.66605
+Epoch 11/50: 100%|██████████| 36385/36385 [03:53<00:00, 155.58it/s, loss=3.69]   
+Average Loss: 98.09398
+Epoch 12/50: 100%|██████████| 36385/36385 [03:55<00:00, 154.36it/s, loss=0.781]  
+Average Loss: 121.99970
+Epoch 13/50: 100%|██████████| 36385/36385 [03:53<00:00, 155.61it/s, loss=5.34]   
+Average Loss: 84.45282
+Epoch 14/50: 100%|██████████| 36385/36385 [03:50<00:00, 157.77it/s, loss=0.836]  
+Average Loss: 63.92080
+Epoch 15/50: 100%|██████████| 36385/36385 [04:13<00:00, 143.28it/s, loss=18.3]   
+Average Loss: 73.68584
+Epoch 16/50: 100%|██████████| 36385/36385 [04:04<00:00, 149.10it/s, loss=2.87]   
+Average Loss: 127.38234
+Epoch 17/50: 100%|██████████| 36385/36385 [04:07<00:00, 147.04it/s, loss=2.11]   
+Average Loss: 97.17135
+Epoch 18/50: 100%|██████████| 36385/36385 [03:51<00:00, 157.15it/s, loss=1.54]   
+Average Loss: 74.68377
+Epoch 19/50: 100%|██████████| 36385/36385 [03:56<00:00, 153.86it/s, loss=2.72]   
+Average Loss: 50.64243
+Epoch 20/50: 100%|██████████| 36385/36385 [03:55<00:00, 154.18it/s, loss=7.12]   
+Average Loss: 49.40629
+Epoch 21/50: 100%|██████████| 36385/36385 [03:55<00:00, 154.79it/s, loss=8.42]   
+Average Loss: 53.74291
+Epoch 22/50: 100%|██████████| 36385/36385 [03:56<00:00, 154.06it/s, loss=2.37]   
+Average Loss: 52.51591
+Epoch 23/50: 100%|██████████| 36385/36385 [03:57<00:00, 152.88it/s, loss=2.76]   
+Average Loss: 40.93771
+Epoch 24/50: 100%|██████████| 36385/36385 [03:58<00:00, 152.42it/s, loss=1.4]    
+Average Loss: 43.57179
+Epoch 25/50: 100%|██████████| 36385/36385 [03:58<00:00, 152.77it/s, loss=443]    
+Average Loss: 38.11794
+Epoch 26/50: 100%|██████████| 36385/36385 [03:58<00:00, 152.61it/s, loss=8.94]   
+Average Loss: 35.57726
+Epoch 27/50: 100%|██████████| 36385/36385 [03:58<00:00, 152.40it/s, loss=1.93]   
+Average Loss: 38.74815
+Epoch 28/50: 100%|██████████| 36385/36385 [03:59<00:00, 152.19it/s, loss=1.16]   
+Average Loss: 40.96085
+Epoch 29/50: 100%|██████████| 36385/36385 [03:58<00:00, 152.41it/s, loss=0.728]  
+Average Loss: 32.78390
+Epoch 30/50: 100%|██████████| 36385/36385 [03:57<00:00, 153.50it/s, loss=2.45]   
+Average Loss: 37.41241
+Epoch 31/50: 100%|██████████| 36385/36385 [04:00<00:00, 151.48it/s, loss=1.05]   
+Average Loss: 37.23257
+Epoch 32/50: 100%|██████████| 36385/36385 [03:58<00:00, 152.29it/s, loss=9.84]   
+Average Loss: 30.58878
+Epoch 33/50: 100%|██████████| 36385/36385 [04:02<00:00, 150.07it/s, loss=3.21]   
+Average Loss: 31.66921
+Epoch 34/50: 100%|██████████| 36385/36385 [04:08<00:00, 146.71it/s, loss=0.832]  
+Average Loss: 35.54128
+Epoch 35/50: 100%|██████████| 36385/36385 [04:02<00:00, 150.20it/s, loss=7.4]    
+Average Loss: 33.41314
+Epoch 36/50: 100%|██████████| 36385/36385 [04:03<00:00, 149.37it/s, loss=1.98]   
+Average Loss: 32.32876
+Epoch 37/50: 100%|██████████| 36385/36385 [04:04<00:00, 149.09it/s, loss=5.81]   
+Average Loss: 39.30071
+Epoch 38/50: 100%|██████████| 36385/36385 [04:04<00:00, 148.68it/s, loss=1.05]   
+Average Loss: 37.55860
+Epoch 39/50: 100%|██████████| 36385/36385 [04:00<00:00, 151.16it/s, loss=18.1]   
+Average Loss: 36.11051
+Epoch 40/50: 100%|██████████| 36385/36385 [04:03<00:00, 149.39it/s, loss=0.973]  
+Average Loss: 34.70448
+Epoch 41/50: 100%|██████████| 36385/36385 [04:01<00:00, 150.83it/s, loss=2.31]   
+Average Loss: 48.97837
+Epoch 42/50: 100%|██████████| 36385/36385 [03:59<00:00, 151.89it/s, loss=1.5]    
+Average Loss: 33.16532
+Epoch 43/50: 100%|██████████| 36385/36385 [04:04<00:00, 148.99it/s, loss=11.5]   
+Average Loss: 30.17241
+Epoch 44/50: 100%|██████████| 36385/36385 [04:02<00:00, 149.93it/s, loss=4.53]   
+Average Loss: 30.42689
+Epoch 45/50: 100%|██████████| 36385/36385 [04:00<00:00, 151.21it/s, loss=3.56]   
+Average Loss: 33.55831
+Epoch 46/50: 100%|██████████| 36385/36385 [03:59<00:00, 151.79it/s, loss=3.35]   
+Average Loss: 33.93939
+Epoch 47/50: 100%|██████████| 36385/36385 [03:58<00:00, 152.69it/s, loss=6.53]   
+Average Loss: 27.62593
+Epoch 48/50: 100%|██████████| 36385/36385 [03:59<00:00, 151.71it/s, loss=2.37]   
+Average Loss: 32.28902
+Epoch 49/50: 100%|██████████| 36385/36385 [04:00<00:00, 151.07it/s, loss=22.4]   
+Average Loss: 28.74178
+Epoch 50/50: 100%|██████████| 36385/36385 [04:14<00:00, 142.77it/s, loss=1.29]   
+Average Loss: 32.86961

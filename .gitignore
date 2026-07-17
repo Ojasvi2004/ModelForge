@@ -1,0 +1,9 @@
+server/model/src/datasets/
+server/model/src/experiments/checkpointsFirstLSTM/
+server/model/src/experiments/checkpointsSecondGRU/
+server/model/src/experiments/candlestick.html
+*.html
+
+*.pth
+*.pt
+*.ipynb
