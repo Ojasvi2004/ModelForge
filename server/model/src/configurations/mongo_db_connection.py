@@ -11,7 +11,8 @@ import sys
 
 from src.constants import DATABASE_NAME,COLLECTION_NAME
 
-load_dotenv()
+load_dotenv(override=True)
+
 
 ca=certifi.where()
 
@@ -21,6 +22,9 @@ class MongoDBClient:
 
     def __init__(self,database_name:str=DATABASE_NAME)->None:
         try:
+            print("Database:", DATABASE_NAME)
+            print("Collection:", COLLECTION_NAME)
+            print("Mongo URL:", os.getenv("MONGODB_URL"))
             if MongoDBClient.client is None:
                 mongo_url=os.getenv("MONGODB_URL")
                 if mongo_url is None:

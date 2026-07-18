@@ -14,13 +14,17 @@ except ImportError:
         ).resolve().parents[4])
     
 LOGS_DIR='logs'
-LOG_FILE=f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}"
+LOG_FILE=f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 MAX_LOG_SIZE=5*1024*1024
 BACKUP_COUNT=3
 
 log_dir_file=os.path.join(from_root(),LOGS_DIR)
 os.makedirs(log_dir_file,exist_ok=True)
 log_file_path=os.path.join(log_dir_file,LOG_FILE)
+
+print("Root:", from_root())
+print("Log directory:", log_dir_file)
+print("Log file:", log_file_path)
 
 def configure_logger():
     """
@@ -35,6 +39,7 @@ def configure_logger():
     file_handler=RotatingFileHandler(log_file_path,maxBytes=MAX_LOG_SIZE,backupCount=BACKUP_COUNT)
     file_handler.setFormatter(formatter)
     file_handler.setLevel(logging.DEBUG)
+    print(file_handler.baseFilename)
     
     console_handler=logging.StreamHandler()
     console_handler.setFormatter(formatter)
@@ -46,4 +51,6 @@ def configure_logger():
     
     
 configure_logger()
+for h in logging.getLogger().handlers:
+    print(type(h), getattr(h, "baseFilename", None))
 

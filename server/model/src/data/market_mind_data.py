@@ -28,7 +28,7 @@ class Market_Mind_Data:
             if database_name is None:
                 collection=self.mongoClient.database[collection_name]
             else:
-                collection=self.mongoClient[database_name][collection_name]
+                collection=self.mongoClient.client[database_name][collection_name]
             
             print("Fetching Data from MongoDB")
 

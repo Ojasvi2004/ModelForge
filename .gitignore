@@ -1,9 +1,55 @@
+# Dataset
 server/model/src/datasets/
+
+# Training checkpoints
 server/model/src/experiments/checkpointsFirstLSTM/
 server/model/src/experiments/checkpointsSecondGRU/
-server/model/src/experiments/candlestick.html
-*.html
 
+# Model files
 *.pth
 *.pt
+
+# Jupyter notebooks
 *.ipynb
+
+# HTML visualizations
+*.html
+
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Build artifacts
+artifact/
+artifacts/
+
+# Pytest
+.pytest_cache/
+
+# Mypy
+.mypy_cache/
+
+# Coverage
+.coverage
+htmlcov/

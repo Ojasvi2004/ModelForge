@@ -26,8 +26,8 @@ class DataIngestionConfig:
 @dataclass
 class DataTransformationConfig:
     data_transformation_directory=os.path.join(training_pipeline_config.artifact_dir,DATA_TRANSFORMATION_DIR_NAME)
-    transformed_train_data_path=os.path.join(data_transformation_directory,DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,TRAIN_FILE_NAME.replace(".csv,".npy))
-    transformed_test_data_path=os.path.join(data_transformation_directory,DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,TEST_FILE_NAME.replace("csv","npy"))
+    transformed_train_data_path=os.path.join(data_transformation_directory,DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,TRAIN_FILE_NAME.replace(".csv",".npy"))
+    transformed_test_data_path=os.path.join(data_transformation_directory,DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,TEST_FILE_NAME.replace(".csv",".npy"))
     tranformed_object_path=os.path.join(data_transformation_directory,DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR,PREPROCSSING_OBJECT_FILE_NAME)
 
 
