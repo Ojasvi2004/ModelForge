@@ -6,6 +6,14 @@ columns:
   close: float64
   volume: int64
 
+
+sort_columns:
+  - symbol
+  - date
+
+group_by_columns:
+  - symbol
+
 numerical_columns:
   - open
   - high

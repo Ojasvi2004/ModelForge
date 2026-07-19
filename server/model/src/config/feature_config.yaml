@@ -1,0 +1,5 @@
+prediction_horizons:
+  target_1d: 1
+  target_5d: 5
+  target_10d: 10
+  target_20d: 20

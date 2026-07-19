@@ -32,7 +32,7 @@ class Market_Mind_Data:
             
             print("Fetching Data from MongoDB")
 
-            df=pd.DataFrame(list(collection.find().limit(10)))
+            df=pd.DataFrame(list(collection.find().limit(300)))
 
             print(f"{len(df)} Data records fetched")
 

@@ -6,6 +6,7 @@ from src.entity.config_entity import DataTransformationConfig
 from src.constants import *
 from src.logger import logger
 from src.exception import MyException
+from feature_engineering import FeatureEngineering
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler,MinMaxScaler
@@ -38,34 +39,33 @@ class DataTransformation:
             return df
         except Exception as e:
             raise MyException(e,sys)
-        
-    def get_data_transformer_object(self)->Pipeline:
 
-        logger.logging("Creating Data tranfromation pipeline.")
-
+    def train_test_split(self,dataframe:pd.DataFrame)->None:
         try:
-            ss=StandardScaler()
-            mm=MinMaxScaler()
-            logger.logging.info("Scalers initialized: StandardScaler, MinMaxScaler")
-            
-            num_features=self._schema_config('numerical_columns')
-
-            logger.logging.info(f"Numerical columns :{num_features}")
-
-            preprocessing=ColumnTransformer(
-                transformers=[
-                    ("Standard Scalar",ss,num_features),
-                ],
-                remainder="passthrough"
-            )
-
-            pipeline=Pipeline(steps=[("preprrocessing",preprocessing)])
-
-            logger.logging.info("Data transformer pipeline created successfully")
-
-            return pipeline
-
+            train=dataframe[dataframe["date"]<self.data_ingestion_configuration.train_test_split_date].copy()
+            test=dataframe[dataframe["date"]>=self.data_ingestion_configuration.train_test_split_date].copy()
+            dir_path=os.path.dirname(self.data_ingestion_configuration.data_ingestion_directory)
+            os.makedirs(dir_path,exist_ok=True)
+            train.to_csv(self.data_ingestion_configuration.train_file_path,index=True,header=True)
+            test.to_csv(self.data_ingestion_configuration.test_file_path,index=True,header=True)
+            logger.logging.info("Saved the training and testing file")
+    
         except Exception as e:
-            logger.logging.exception("Error creating data transformer pipeline")
+            raise MyException(e,sys)  
+
+
+    def feature_engineering(self,df:pd.DataFrame)->pd.DataFrame:
+        try:
+            logger.logging.info("Starting feature engineering on the dataset.")
+            sort_columns=self._schema_config["sort_columns"]
+            df=df.sort_values(sort_columns)
+            logger.logging.info(f"Data sorted by {sort_columns}.")
+            logger.logging.info("Engineering technical features and multi-horizon targets...")
+            g = df.groupby(self._schema_config["group_by_columns"])
+            
+
+
+            pass
+        except Exception as e:
             raise MyException(e,sys)
         

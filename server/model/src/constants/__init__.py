@@ -1,4 +1,5 @@
 import os
+from from_root import from_root
 from datetime import date
 
 
@@ -17,8 +18,10 @@ PREPROCSSING_OBJECT_FILE_NAME = "preprocessing.pkl"
 FILE_NAME: str = "data.csv"
 TRAIN_FILE_NAME: str = "train.csv"
 TEST_FILE_NAME: str = "test.csv"
-SCHEMA_FILE_PATH = os.path.join("config", "schema.yaml")
+SCHEMA_FILE_PATH = os.path.join("src","config", "schema.yaml")
 
+
+FEATURE_CONFIG_PATH=os.path.join("src","config","feature_config.yaml")
 
 AWS_ACCESS_KEY_ID_ENV_KEY = "AWS_ACCESS_KEY_ID"
 AWS_SECRET_ACCESS_KEY_ENV_KEY = "AWS_SECRET_ACCESS_KEY"
@@ -47,6 +50,15 @@ Data Transformation ralated constant start with DATA_TRANSFORMATION VAR NAME
 DATA_TRANSFORMATION_DIR_NAME: str = "data_transformation"
 DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR: str = "transformed"
 DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR: str = "transformed_object"
+
+
+"""
+Feature Engineering realted constants
+"""
+FEATURE_ENGINEERING_DIR_NAME:str="feature_engineering"
+FEATURE_ENGINEERING_RAW_DIR_NAME:str="raw_data"
+FEATURE_ENGINEERING_RAW_FILE_NAME:str='feature_engineered_raw_data.csv'
+
 
 """
 MODEL TRAINER related constant start with MODEL_TRAINER var name

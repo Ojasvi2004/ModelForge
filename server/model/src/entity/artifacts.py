@@ -4,9 +4,21 @@ from datetime import datetime
 
 @dataclass
 class DataIngestionArtifactEntity:
-    train_file_path:str
-    test_file_path:str
+    raw_file_path:str
 
+
+
+@dataclass
+class FeatureEngineeringArtifactEntity:
+    feature_engineering_raw_file_path:str
+    target_columns:list
+    max_horizon:int
+
+
+@dataclass
+class DataValidationArtifact:
+    validation_status:False
+    message:str
 
 @dataclass
 class DataTranformationArtifactEntity:

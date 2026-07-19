@@ -34,28 +34,26 @@ class DataIngestion:
         except Exception as e:
             raise MyException(e,sys)
         
-    def train_test_split(self,dataframe:pd.DataFrame)->None:
-        try:
-            train=dataframe[dataframe["date"]<self.data_ingestion_configuration.train_test_split_date].copy()
-            test=dataframe[dataframe["date"]>=self.data_ingestion_configuration.train_test_split_date].copy()
-            dir_path=os.path.dirname(self.data_ingestion_configuration.data_ingestion_directory)
-            os.makedirs(dir_path,exist_ok=True)
-            train.to_csv(self.data_ingestion_configuration.train_file_path,index=True,header=True)
-            test.to_csv(self.data_ingestion_configuration.test_file_path,index=True,header=True)
-            logger.logging.info("Saved the training and testing file")
+    # def train_test_split(self,dataframe:pd.DataFrame)->None:
+    #     try:
+    #         train=dataframe[dataframe["date"]<self.data_ingestion_configuration.train_test_split_date].copy()
+    #         test=dataframe[dataframe["date"]>=self.data_ingestion_configuration.train_test_split_date].copy()
+    #         dir_path=os.path.dirname(self.data_ingestion_configuration.data_ingestion_directory)
+    #         os.makedirs(dir_path,exist_ok=True)
+    #         train.to_csv(self.data_ingestion_configuration.train_file_path,index=True,header=True)
+    #         test.to_csv(self.data_ingestion_configuration.test_file_path,index=True,header=True)
+    #         logger.logging.info("Saved the training and testing file")
     
-        except Exception as e:
-            raise MyException(e,sys)
+    #     except Exception as e:
+    #         raise MyException(e,sys)
         
 
     def initiate_data_ingestion(self)->DataIngestionArtifactEntity:
         try:
             dataframe=self.import_raw_data()
             logger.logging.info("Got the data from MongoDB")
-            self.train_test_split(dataframe=dataframe)
             data_ingestion_artifact=DataIngestionArtifactEntity(
-                train_file_path=self.data_ingestion_configuration.train_file_path,
-                test_file_path=self.data_ingestion_configuration.test_file_path
+                raw_file_path=self.data_ingestion_configuration.raw_data_file_path
             )
             logger.logging.info(f"Data ingestion artifact created {data_ingestion_artifact}")
 
@@ -63,9 +61,7 @@ class DataIngestion:
         except Exception as e:
             raise MyException(e,sys)
         
-if __name__=="__main__":
-    test_object=DataIngestion()
-    test_object.initiate_data_ingestion()
+
 
         
     

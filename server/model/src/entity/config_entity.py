@@ -17,9 +17,6 @@ training_pipeline_config:TrainingPipelineConfig=TrainingPipelineConfig()
 class DataIngestionConfig:
     data_ingestion_directory=os.path.join(training_pipeline_config.artifact_dir,DATA_INGESTION_DIR_NAME)
     raw_data_file_path=os.path.join(data_ingestion_directory,DATA_INGESTION_RAW_DATA_DIR)
-    train_file_path=os.path.join(data_ingestion_directory,TRAIN_FILE_NAME)
-    test_file_path=os.path.join(data_ingestion_directory,TEST_FILE_NAME)
-    train_test_split_date=DATA_INGESTION_TRAIN_END_DATE
     collection_name=COLLECTION_NAME
 
 
@@ -31,7 +28,16 @@ class DataTransformationConfig:
     tranformed_object_path=os.path.join(data_transformation_directory,DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR,PREPROCSSING_OBJECT_FILE_NAME)
 
 
+@dataclass
+class DataValidationConfig:
+    data_validation_dir=os.path.join(training_pipeline_config.artifact_dir,DATA_VALIDATION_DIR_NAME)
+    validation_report_file_path=os.path.join(data_validation_dir,DATA_VALIDATION_REPORT_FILE_NAME)
+    
 
+@dataclass
+class FeatureEngineeringConfig:
+    feature_engineering_directory=os.path.join(training_pipeline_config.artifact_dir,FEATURE_ENGINEERING_DIR_NAME)
+    featured_engineering_raw_file_path=os.path.join(feature_engineering_directory,FEATURE_ENGINEERING_RAW_FILE_NAME)
 
 from dataclasses import dataclass
 import os
