@@ -50,3 +50,5 @@ runs/
 !*.dvc
 !dvc.yaml
 !dvc.lock
+
+.env
