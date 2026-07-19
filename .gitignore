@@ -1,57 +1,52 @@
-# Dataset
-server/model/src/datasets/
 
-# Training checkpoints
-server/model/src/experiments/checkpointsFirstLSTM/
-server/model/src/experiments/checkpointsSecondGRU/
-server/model/src/experiments/artifacts
-server/model/src/experiments/artifacts_walkforward
-
-# Model files
-*.pth
-*.pt
-
-# Jupyter notebooks
-*.ipynb
-
-# HTML visualizations
-*.html
-
-# Environment variables
-.env
-
-# Python cache
 __pycache__/
 *.py[cod]
-*.pyo
+*$py.class
+*.so
 
-# Virtual environments
 .venv/
 venv/
 env/
+ENV/
 
-# IDE
+
 .vscode/
 .idea/
 
-# OS files
-.DS_Store
-Thumbs.db
 
-# Logs
 logs/
 *.log
 
-# Build artifacts
-artifact/
-artifacts/
 
-# Pytest
+.DS_Store
+Thumbs.db
+
+
 .pytest_cache/
-
-# Mypy
-.mypy_cache/
-
-# Coverage
 .coverage
 htmlcov/
+
+
+.ipynb_checkpoints/
+
+
+build/
+dist/
+*.egg-info/
+
+
+catboost_info/
+wandb/
+mlruns/
+tensorboard/
+runs/
+
+
+.dvc/cache/
+.dvc/tmp/
+
+
+!.dvc/
+!*.dvc
+!dvc.yaml
+!dvc.lock

@@ -1,0 +1,6 @@
+outs:
+- md5: 1f4ab2304e4423e1fee3b81aa00b8d9d.dir
+  size: 79809832
+  nfiles: 385
+  hash: md5
+  path: artifacts_walkforward

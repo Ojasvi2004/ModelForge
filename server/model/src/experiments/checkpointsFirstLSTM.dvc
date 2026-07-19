@@ -1,0 +1,6 @@
+outs:
+- md5: 6e26d7b25bee8341e96fbe7d5ce41b78.dir
+  size: 4903431
+  nfiles: 3
+  hash: md5
+  path: checkpointsFirstLSTM
