@@ -4,6 +4,8 @@ server/model/src/datasets/
 # Training checkpoints
 server/model/src/experiments/checkpointsFirstLSTM/
 server/model/src/experiments/checkpointsSecondGRU/
+server/model/src/experiments/artifacts
+server/model/src/experiments/artifacts_walkforward
 
 # Model files
 *.pth
