@@ -20,12 +20,11 @@ class DataValidationArtifact:
     validation_status:False
     message:str
 
-@dataclass
-class DataTranformationArtifactEntity:
-    transformed_object_file_path:str
-    tranformed_train_file_path:str
-    transformed_test_file_path:str
 
+@dataclass
+class WalkForwardFoldArtifactEntity:
+    walk_forward_dir: str
+    fold_metadata_file_name: str
 
 @dataclass
 class ClassificationMetricsArtifactEntity:

@@ -47,9 +47,8 @@ DATA_VALIDATION_REPORT_FILE_NAME: str = "report.yaml"
 """
 Data Transformation ralated constant start with DATA_TRANSFORMATION VAR NAME
 """
-DATA_TRANSFORMATION_DIR_NAME: str = "data_transformation"
-DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR: str = "transformed"
-DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR: str = "transformed_object"
+WALK_FORWARD_FOLD_DIR_NAME="walk_forward_fold"
+WALK_FORWARD_FOLD_METADATA_FILE_NAME="walkforward_folds_metadata.json"
 
 
 """
@@ -81,6 +80,14 @@ MODEL_TRAINER_PATIENCE:int=5
 MODEL_TRAINER_DEVICE:str="cuda"
 MODEL_TRAINER_GRADIENT_CLIP:float=1.0
 
+SEQ_LEN = 60
+EPOCHS = 25
+PATIENCE = 4
+MAX_GRAD_NORM = 1.0
+TRANSACTION_COST_BPS = 10
+TOP_N = 20
+MIN_TRAIN_YEARS = 2      # minimum calendar years of history required before the first fold
+MAX_FOLDS = None         # set an int to cap the number of folds while iterating quickly; None = all available
 
 
 """

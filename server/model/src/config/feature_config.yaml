@@ -3,3 +3,40 @@ prediction_horizons:
   target_5d: 5
   target_10d: 10
   target_20d: 20
+
+sequence_features:
+  - daily_return
+  - close_to_ma5
+  - close_to_ma20
+  - close_to_ma50
+  - ma5_to_ma20
+  - high_to_low
+  - close_to_open
+  - volatility
+  - atr_pct
+  - bollinger_pctb
+  - macd
+  - macd_signal
+  - macd_hist
+  - roc5
+  - roc10
+  - roc20
+  - volume_ratio
+  - volume_z
+  - gap
+  - rsi
+  - relative_return
+  - daily_return_xrank
+  - rsi_xrank
+  - volume_ratio_xrank
+  - roc10_xrank
+  - dow_sin
+  - dow_cos
+
+current_features:
+  - daily_return
+  - volatility
+  - volume_ratio
+  - rsi
+  - relative_return
+  - roc10_xrank

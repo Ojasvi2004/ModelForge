@@ -19,11 +19,16 @@ class FeatureEngineering:
                 feature_engineering_config=FeatureEngineeringConfig()
             self.data_ingestion_artifact=data_ingestion_artifact
             self.feature_engineer_config=feature_engineering_config
+            logger.logging.info(f"Readin the scheme configuration file: {SCHEMA_FILE_PATH} ")
+            self._schema_config=read_yaml_file(SCHEMA_FILE_PATH)
             logger.logging.info(f"Reading feature configuration from: {FEATURE_CONFIG_PATH}")
 
             self._feature_config=read_yaml_file(FEATURE_CONFIG_PATH)
             logger.logging.info(f"Loading raw dataset from: {self.data_ingestion_artifact.raw_file_path}")
             self.df=pd.read_csv(self.data_ingestion_artifact.raw_file_path)
+            sort_columns=self._schema_config["sort_columns"]
+            self.df=self.df.sort_values(sort_columns)
+            logger.logging.info(f"Data sorted by {sort_columns}.")
             self.df["date"] = pd.to_datetime(self.df["date"])
             logger.logging.info(f"Raw dataset loaded successfully. Shape: {self.df.shape}")
         except Exception as e:

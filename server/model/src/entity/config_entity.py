@@ -21,12 +21,15 @@ class DataIngestionConfig:
 
 
 @dataclass
-class DataTransformationConfig:
-    data_transformation_directory=os.path.join(training_pipeline_config.artifact_dir,DATA_TRANSFORMATION_DIR_NAME)
-    transformed_train_data_path=os.path.join(data_transformation_directory,DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,TRAIN_FILE_NAME.replace(".csv",".npy"))
-    transformed_test_data_path=os.path.join(data_transformation_directory,DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,TEST_FILE_NAME.replace(".csv",".npy"))
-    tranformed_object_path=os.path.join(data_transformation_directory,DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR,PREPROCSSING_OBJECT_FILE_NAME)
-
+class WalkForwardFoldConfig:
+    walk_forward_directory: str = os.path.join(
+        training_pipeline_config.artifact_dir, 
+        WALK_FORWARD_FOLD_DIR_NAME
+    )
+    fold_metadata_path: str = os.path.join(
+        walk_forward_directory, 
+        WALK_FORWARD_FOLD_METADATA_FILE_NAME
+    )
 
 @dataclass
 class DataValidationConfig:
