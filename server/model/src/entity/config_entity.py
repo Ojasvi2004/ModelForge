@@ -47,27 +47,44 @@ import os
 
 @dataclass
 class ModelTrainerConfig:
+    
+    @dataclass
+    class HybridHorizonLossConfig:
+        alpha=HYBRID_HORIZON_LOSS_APLHA
 
-    model_trainer_dir: str = os.path.join(
-        training_pipeline_config.artifact_dir,
-        MODEL_TRAINER_DIR_NAME
-    )
+    class Schedular:
+        mode='min'
+        factor=0.5
+        patience=2
 
-    trained_model_file_path: str = os.path.join(
-        model_trainer_dir,
-        MODEL_TRAINER_TRAINED_MODEL_DIR,
-        MODEL_TRAINER_TRAINED_MODEL_NAME
-    )
+    @dataclass
+    class UnifiedDeepEncoderConfig:
+        embed_dim= UNIFIED_DEEP_ENCODER_TRANSFORMER_EMBED_DIM
+        hidden_dim= UNIFIED_DEEP_ENCODER_TRANSFORMER_HIDDEN_DIM
+        horizons:int=UNIFIED_DEEP_ENCODER_TRANSFORMER_HORIZONS
+        dropout: float = UNIFIED_DEEP_ENCODER_TRANSFORMER_DROPOUT
+
+    @dataclass
+    class TreeModelsConfig:
+        n_estimators=MODEL_TRAINER_TREE_MODELS_N_ESTIMATORS
+        max_depth=MODEL_TRAINER_TREE_MODELS_MAX_DEPTH
+        learning_rate=MODEL_TRAINER_LEARNING_RATE
+        subsample=MODEL_TRAINER_TREE_MODELS_SUBSAMPLE
+        colsample_bytree=MODEL_TRAINER_TREE_MODELS_COLSAMPLE_BYTREE
+        reg_alpha=MODEL_TRAINER_TREE_MODELS_REG_ALPHA
+        res_lambda=MODEL_TRAINER_TREE_MODELS_RES_LAMBDA
+        
 
     input_size: int = MODEL_TRAINER_INPUT_SIZE
-    hidden_size: int = MODEL_TRAINER_HIDDEN_SIZE
-    num_layers: int = MODEL_TRAINER_NUM_LAYERS
+    hidden_dim: int =UNIFIED_DEEP_ENCODER_TRANSFORMER_HIDDEN_DIM
+    num_layers: int =UNIFIED_DEEP_ENCODER_TRANSFORMER_NUM_LAYERS
     output_size: int = MODEL_TRAINER_OUTPUT_SIZE
-
+    num_heads:int=UNIFIED_DEEP_ENCODER_TRANSFORMER_NUM_HEADS
+    model_dim:int=UNIFIED_DEEP_ENCODER_TRANSFORMER_MODEL_DIM
     batch_size: int = MODEL_TRAINER_BATCH_SIZE
     sequence_length: int = MODEL_TRAINER_SEQUENCE_LENGTH
-
-    dropout: float = MODEL_TRAINER_DROPOUT
+    horizons:int=UNIFIED_DEEP_ENCODER_TRANSFORMER_HORIZONS
+    dropout: float = UNIFIED_DEEP_ENCODER_TRANSFORMER_DROPOUT
 
     optimizer: str = MODEL_TRAINER_OPTIMIZER
     learning_rate: float = MODEL_TRAINER_LEARNING_RATE
@@ -77,8 +94,9 @@ class ModelTrainerConfig:
 
     patience: int = MODEL_TRAINER_PATIENCE
     gradient_clip: float = MODEL_TRAINER_GRADIENT_CLIP
-
+    saved_model_path:str=MODEL_TRAINER_TRAINED_MODEL_NAME
     device: str = MODEL_TRAINER_DEVICE
+    model_trainer_directory:str=MODEL_TRAINER_DIR_NAME
 
 
 @dataclass

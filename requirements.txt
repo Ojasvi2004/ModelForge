@@ -1,0 +1,10 @@
+from_root
+pandas
+pymongo
+python-dotenv
+xgboost
+lightgbm
+catboost
+torch
+numpy
+pandas
