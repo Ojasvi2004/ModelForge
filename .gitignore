@@ -40,7 +40,7 @@ wandb/
 mlruns/
 tensorboard/
 runs/
-server/model/artifact/
+server/model/artifact/*
 
 
 .dvc/cache/
