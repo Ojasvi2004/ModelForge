@@ -1,0 +1,241 @@
+{
+    "seq_features": [
+        "daily_return",
+        "close_to_ma5",
+        "close_to_ma20",
+        "close_to_ma50",
+        "ma5_to_ma20",
+        "high_to_low",
+        "close_to_open",
+        "volatility",
+        "atr_pct",
+        "bollinger_pctb",
+        "macd",
+        "macd_signal",
+        "macd_hist",
+        "roc5",
+        "roc10",
+        "roc20",
+        "volume_ratio",
+        "volume_z",
+        "gap",
+        "rsi",
+        "relative_return",
+        "daily_return_xrank",
+        "rsi_xrank",
+        "volume_ratio_xrank",
+        "roc10_xrank",
+        "dow_sin",
+        "dow_cos"
+    ],
+    "curr_features": [
+        "daily_return",
+        "volatility",
+        "volume_ratio",
+        "rsi",
+        "relative_return",
+        "roc10_xrank"
+    ],
+    "targets": [
+        "target_1d",
+        "target_5d",
+        "target_10d",
+        "target_20d"
+    ],
+    "seq_len": 60,
+    "max_horizon": 20,
+    "folds": [
+        {
+            "name": "train_lt_2002_val_2002_test_2003",
+            "val_year": 2002,
+            "test_year": 2003,
+            "train_end": "2002-01-01",
+            "val_end": "2003-01-01",
+            "test_end": "2004-01-01"
+        },
+        {
+            "name": "train_lt_2003_val_2003_test_2004",
+            "val_year": 2003,
+            "test_year": 2004,
+            "train_end": "2003-01-01",
+            "val_end": "2004-01-01",
+            "test_end": "2005-01-01"
+        },
+        {
+            "name": "train_lt_2004_val_2004_test_2005",
+            "val_year": 2004,
+            "test_year": 2005,
+            "train_end": "2004-01-01",
+            "val_end": "2005-01-01",
+            "test_end": "2006-01-01"
+        },
+        {
+            "name": "train_lt_2005_val_2005_test_2006",
+            "val_year": 2005,
+            "test_year": 2006,
+            "train_end": "2005-01-01",
+            "val_end": "2006-01-01",
+            "test_end": "2007-01-01"
+        },
+        {
+            "name": "train_lt_2006_val_2006_test_2007",
+            "val_year": 2006,
+            "test_year": 2007,
+            "train_end": "2006-01-01",
+            "val_end": "2007-01-01",
+            "test_end": "2008-01-01"
+        },
+        {
+            "name": "train_lt_2007_val_2007_test_2008",
+            "val_year": 2007,
+            "test_year": 2008,
+            "train_end": "2007-01-01",
+            "val_end": "2008-01-01",
+            "test_end": "2009-01-01"
+        },
+        {
+            "name": "train_lt_2008_val_2008_test_2009",
+            "val_year": 2008,
+            "test_year": 2009,
+            "train_end": "2008-01-01",
+            "val_end": "2009-01-01",
+            "test_end": "2010-01-01"
+        },
+        {
+            "name": "train_lt_2009_val_2009_test_2010",
+            "val_year": 2009,
+            "test_year": 2010,
+            "train_end": "2009-01-01",
+            "val_end": "2010-01-01",
+            "test_end": "2011-01-01"
+        },
+        {
+            "name": "train_lt_2010_val_2010_test_2011",
+            "val_year": 2010,
+            "test_year": 2011,
+            "train_end": "2010-01-01",
+            "val_end": "2011-01-01",
+            "test_end": "2012-01-01"
+        },
+        {
+            "name": "train_lt_2011_val_2011_test_2012",
+            "val_year": 2011,
+            "test_year": 2012,
+            "train_end": "2011-01-01",
+            "val_end": "2012-01-01",
+            "test_end": "2013-01-01"
+        },
+        {
+            "name": "train_lt_2012_val_2012_test_2013",
+            "val_year": 2012,
+            "test_year": 2013,
+            "train_end": "2012-01-01",
+            "val_end": "2013-01-01",
+            "test_end": "2014-01-01"
+        },
+        {
+            "name": "train_lt_2013_val_2013_test_2014",
+            "val_year": 2013,
+            "test_year": 2014,
+            "train_end": "2013-01-01",
+            "val_end": "2014-01-01",
+            "test_end": "2015-01-01"
+        },
+        {
+            "name": "train_lt_2014_val_2014_test_2015",
+            "val_year": 2014,
+            "test_year": 2015,
+            "train_end": "2014-01-01",
+            "val_end": "2015-01-01",
+            "test_end": "2016-01-01"
+        },
+        {
+            "name": "train_lt_2015_val_2015_test_2016",
+            "val_year": 2015,
+            "test_year": 2016,
+            "train_end": "2015-01-01",
+            "val_end": "2016-01-01",
+            "test_end": "2017-01-01"
+        },
+        {
+            "name": "train_lt_2016_val_2016_test_2017",
+            "val_year": 2016,
+            "test_year": 2017,
+            "train_end": "2016-01-01",
+            "val_end": "2017-01-01",
+            "test_end": "2018-01-01"
+        },
+        {
+            "name": "train_lt_2017_val_2017_test_2018",
+            "val_year": 2017,
+            "test_year": 2018,
+            "train_end": "2017-01-01",
+            "val_end": "2018-01-01",
+            "test_end": "2019-01-01"
+        },
+        {
+            "name": "train_lt_2018_val_2018_test_2019",
+            "val_year": 2018,
+            "test_year": 2019,
+            "train_end": "2018-01-01",
+            "val_end": "2019-01-01",
+            "test_end": "2020-01-01"
+        },
+        {
+            "name": "train_lt_2019_val_2019_test_2020",
+            "val_year": 2019,
+            "test_year": 2020,
+            "train_end": "2019-01-01",
+            "val_end": "2020-01-01",
+            "test_end": "2021-01-01"
+        },
+        {
+            "name": "train_lt_2020_val_2020_test_2021",
+            "val_year": 2020,
+            "test_year": 2021,
+            "train_end": "2020-01-01",
+            "val_end": "2021-01-01",
+            "test_end": "2022-01-01"
+        },
+        {
+            "name": "train_lt_2021_val_2021_test_2022",
+            "val_year": 2021,
+            "test_year": 2022,
+            "train_end": "2021-01-01",
+            "val_end": "2022-01-01",
+            "test_end": "2023-01-01"
+        },
+        {
+            "name": "train_lt_2022_val_2022_test_2023",
+            "val_year": 2022,
+            "test_year": 2023,
+            "train_end": "2022-01-01",
+            "val_end": "2023-01-01",
+            "test_end": "2024-01-01"
+        },
+        {
+            "name": "train_lt_2023_val_2023_test_2024",
+            "val_year": 2023,
+            "test_year": 2024,
+            "train_end": "2023-01-01",
+            "val_end": "2024-01-01",
+            "test_end": "2025-01-01"
+        },
+        {
+            "name": "train_lt_2024_val_2024_test_2025",
+            "val_year": 2024,
+            "test_year": 2025,
+            "train_end": "2024-01-01",
+            "val_end": "2025-01-01",
+            "test_end": "2026-01-01"
+        },
+        {
+            "name": "train_lt_2025_val_2025_test_2026",
+            "val_year": 2025,
+            "test_year": 2026,
+            "train_end": "2025-01-01",
+            "val_end": "2026-01-01",
+            "test_end": "2027-01-01"
+        }
+    ]
+}

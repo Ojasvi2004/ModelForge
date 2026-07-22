@@ -219,12 +219,12 @@ class HybridHorizonLoss(nn.Module):
 class ModelTrainer:
 
     def __init__(self,
-                 model_trainer_config:ModelTrainerConfig,
-                 walk_forward_fold_artifact:WalkForwardFoldArtifactEntity):
-        if model_trainer_config is None:
-            model_trainer_config=ModelTrainerConfig()
+                 walk_forward_fold_artifact:WalkForwardFoldArtifactEntity,
+                  model_trainer_config:ModelTrainerConfig=None):
 
         try:
+            if model_trainer_config is None:
+                model_trainer_config=ModelTrainerConfig()
             logger.logging.info("Initializing ModelTrainer component.")
             self.model_trainer_config = model_trainer_config
             self.walk_forward_fold_artifact = walk_forward_fold_artifact
@@ -606,7 +606,7 @@ class ModelTrainer:
                     f"y_tr:{y_tr.shape}, y_vl:{y_vl.shape}"
                 )
                 if HAS_XGB:
-                    m=xgb.XGBRFRegressor(
+                    m=xgb.XGBRegressor(
                         n_estimators=self.model_trainer_config.TreeModelsConfig.n_estimators,
                         max_depth=self.model_trainer_config.TreeModelsConfig.max_depth,
                         learning_rate=self.model_trainer_config.TreeModelsConfig.learning_rate,
@@ -967,7 +967,7 @@ class ModelTrainer:
                 trained_model_path=os.path.join(production_dir, "best_hybrid_deep.pth"),
 
             )
-            logger.logging.info(f"[initiate_model_trainer] Returning ModelTrainerArtifactEntity -> model_path={artifact.model_path}")
+            logger.logging.info(f"[initiate_model_trainer] Returning ModelTrainerArtifactEntity -> model_path={artifact.trained_model_path}")
             return artifact
 
         except Exception as e:

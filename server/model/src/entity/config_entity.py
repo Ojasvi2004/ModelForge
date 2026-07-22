@@ -72,11 +72,11 @@ class ModelTrainerConfig:
         subsample=MODEL_TRAINER_TREE_MODELS_SUBSAMPLE
         colsample_bytree=MODEL_TRAINER_TREE_MODELS_COLSAMPLE_BYTREE
         reg_alpha=MODEL_TRAINER_TREE_MODELS_REG_ALPHA
-        res_lambda=MODEL_TRAINER_TREE_MODELS_RES_LAMBDA
+        reg_lambda=MODEL_TRAINER_TREE_MODELS_REG_LAMBDA
         n_jobs=MODEL_TRAINER_TREE_MODELS_N_JOBS
         earlystopping_rounds=MODEL_TRAINER_TREE_MODELS_EARLYSTOPPING_ROUNDS
-        
-        
+        random_state=MODEL_TRAINER_TREE_MODELS_RANDOM_STATE
+        l2_leaf_reg=MODEL_TRAINER_TREE_MODELS_CAT_BOOST_L2_LEAF_REG
 
     input_size: int = MODEL_TRAINER_INPUT_SIZE
     hidden_dim: int =UNIFIED_DEEP_ENCODER_TRANSFORMER_HIDDEN_DIM
@@ -99,7 +99,7 @@ class ModelTrainerConfig:
     gradient_clip: float = MODEL_TRAINER_GRADIENT_CLIP
     saved_model_path:str=MODEL_TRAINER_TRAINED_MODEL_NAME
     device: str = MODEL_TRAINER_DEVICE
-    model_trainer_directory:str=MODEL_TRAINER_DIR_NAME
+    model_trainer_directory:str=os.path.join(training_pipeline_config.artifact_dir, MODEL_TRAINER_DIR_NAME)
 
 
 @dataclass

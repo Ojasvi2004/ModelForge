@@ -52,3 +52,4 @@ runs/
 !dvc.lock
 
 .env
+best_model.pth

@@ -2,6 +2,7 @@ from src.stages.data_ingestion import DataIngestion
 from src.stages.feature_engineering import FeatureEngineering
 from src.stages.data_validation import DataValidation
 from src.stages.walk_forward_fold import WalkForwardFold
+from src.stages.model_trainer import ModelTrainer
 from src.logger import logger
 
 
@@ -18,3 +19,5 @@ if __name__=="__main__":
     feature_engineering_artifact=test_feature_engineering_object.initiate_feature_engineering_artifact()
     test_walk_forward_object=WalkForwardFold(feature_engineering_artifact=feature_engineering_artifact)
     walk_forward_fold_artifact=test_walk_forward_object.initiate_walk_forward_folding()
+    test_model_trainer_object=ModelTrainer(walk_forward_fold_artifact=walk_forward_fold_artifact)
+    model_trainer_artifact=test_model_trainer_object.initiate_model_trainer()
