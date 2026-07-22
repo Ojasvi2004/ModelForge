@@ -36,9 +36,9 @@ class ClassificationMetricsArtifactEntity:
 
 @dataclass
 class ModelTrainerArtifactEntity:
-    is_model_accepted:bool
-    changed_loss:float
-    s3_model_path:str
+    # is_model_accepted:bool
+    # changed_loss:float
+    # s3_model_path:str
     trained_model_path:str
 
 

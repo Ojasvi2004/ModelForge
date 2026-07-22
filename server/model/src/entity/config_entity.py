@@ -73,6 +73,9 @@ class ModelTrainerConfig:
         colsample_bytree=MODEL_TRAINER_TREE_MODELS_COLSAMPLE_BYTREE
         reg_alpha=MODEL_TRAINER_TREE_MODELS_REG_ALPHA
         res_lambda=MODEL_TRAINER_TREE_MODELS_RES_LAMBDA
+        n_jobs=MODEL_TRAINER_TREE_MODELS_N_JOBS
+        earlystopping_rounds=MODEL_TRAINER_TREE_MODELS_EARLYSTOPPING_ROUNDS
+        
         
 
     input_size: int = MODEL_TRAINER_INPUT_SIZE
